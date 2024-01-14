@@ -7,12 +7,12 @@ import { Component, ElementRef, ViewChildren, QueryList } from '@angular/core';
 })
 export class AppComponent {
   title = 'chi-app';
-  fullName: string = '';
-  @ViewChildren('inputEl', {}) inputElements?: QueryList<ElementRef>;
+  fullName: string = ''
+  @ViewChildren('inputEl', {}) inputElements: QueryList<ElementRef>
 
   show() {
     let name = ''
-    this.inputElements?.forEach((el) => {
+    this.inputElements.forEach((el) => {
       name += el.nativeElement.value + ' '
     })
     this.fullName = name.trim();
